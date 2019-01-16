@@ -1,5 +1,5 @@
 {
-  "name": "fun-js",
+  "name": "fund-js",
   "version": "1.0.0",
   "description": "Simple JavaScript Library with fundamental util functions",
   "main": "./src/index.js",
@@ -22,7 +22,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brandon6190/fun-js.git"
+    "url": "git+https://github.com/brandon6190/fund-js.git"
   },
   "keywords": [
     "npm",
@@ -33,9 +33,9 @@
   "author": "Brandon <brandon6190@outlook.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/brandon6190/fun-js/issues"
+    "url": "https://github.com/brandon6190/fund-js/issues"
   },
-  "homepage": "https://github.com/brandon6190/fun-js#readme",
+  "homepage": "https://github.com/brandon6190/fund-js#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.1",
