@@ -1,9 +1,3 @@
-/**
- * returns true if the number is negative or odd
- * ex: isNegativeOrOdd(1); -> true
- * ex: isNegativeOrOdd(-2); -> true
- * ex: isNegativeOrOdd(2); -> false
- */
 function isNegativeOrOdd(value) {
   if (value % 2 === 1 || value < 0) {
     return true;
