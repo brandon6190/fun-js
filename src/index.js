@@ -5,12 +5,6 @@ function isNegativeOrOdd(value) {
   return false;
 }
 
-/**
- * repeats the given string count times
- * repeat('abc',3); -> 'abcabcabc'
- * repeat('*', 2); -> '**'
- * repeat('abc',0); -> ''
- */
 function repeat(string, count) {
   let result = '';
   for (let i = count; i > 0; i -= 1) {
