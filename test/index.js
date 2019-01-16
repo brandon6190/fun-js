@@ -34,3 +34,13 @@ describe('isNegativeOrOdd()', () => {
     assert.equal(isNegativeOrOdd(2), false);
   });
 });
+
+describe('repeat()', () => {
+  it('should repeat the given string the amount of times as the count number', () => {
+    assert.equal(repeat('abc', 3), 'abcabcabc');
+    assert.equal(repeat('*', 2), '**');
+  });
+  it('should return a empty string if no count number is provided', () => {
+    assert.equal(repeat('abc', 0), '');
+  });
+}); 
