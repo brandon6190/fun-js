@@ -52,3 +52,9 @@ describe('reverseString()', () => {
     assert.equal(reverseString('will'), 'lliw');
   });
 });
+
+describe('reverseObject()', () => {
+  it('should reverse the key/value pairs in an object', () => {
+    assert.deepEqual(reverseObject({"a":1,"b":"c","d":4}), {"1":"a","4":"d",c:"b"});
+  });
+});
