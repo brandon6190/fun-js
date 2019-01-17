@@ -120,3 +120,13 @@ describe('size()', () => {
     assert.equal(size({a: 1, b: 2}), 2);
   });
 });
+
+describe('indexOf()', () => {
+  it('should return the index at which the first occurrence of the second argument is found', () => {
+    assert.equal(indexOf([11, 22, 33], 11), 0);
+  });
+
+  it('should return -1 if the value is not found', () => {
+    assert.equal(indexOf([11, 22, 33], 5), -1);
+  });
+});
