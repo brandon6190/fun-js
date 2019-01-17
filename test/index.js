@@ -90,3 +90,13 @@ describe('isObject()', () => {
     assert.equal(isObject('hey'), false);;
   });
 });
+
+describe('isNull()', () => {
+  it('should return true if the argument is null', () => {
+    assert.equal(isNull(null), true);
+  });
+
+  it('should return false if the argument is not null', () => {
+    assert.equal(isNull(5), false);
+  });
+});
