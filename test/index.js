@@ -40,7 +40,15 @@ describe('repeat()', () => {
     assert.equal(repeat('abc', 3), 'abcabcabc');
     assert.equal(repeat('*', 2), '**');
   });
+
   it('should return a empty string if no count number is provided', () => {
     assert.equal(repeat('abc', 0), '');
   });
-}); 
+});
+
+describe('reverseString()', () => {
+  it('should reverse the given string', () => {
+    assert.equal(reverseString('hello'), 'olleh');
+    assert.equal(reverseString('will'), 'lliw');
+  });
+});
