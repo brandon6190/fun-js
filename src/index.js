@@ -13,12 +13,6 @@ function repeat(string, count) {
   return result;
 }
 
-/**
- * returns a string that is the reverse of the inputted string
- * assume only strings are inputted
- * reverseString('hello'); -> 'olleh'
- * reverseString('will'); -> 'lliw'
- */
 function reverseString(string) {
   let result = '';
   for (let i = string.length - 1; i >= 0; i -= 1) {
@@ -27,10 +21,6 @@ function reverseString(string) {
   return result;
 }
 
-/**
- * accepts an object and returns an object with key and values switched
- * ex: reverseObject({"a":1,b:"c","d":4}); -> {1:"a",c:"b",4:"d"}
- */
 function reverseObject(object) {
   const myObject = {};
   for (const key in object) {
