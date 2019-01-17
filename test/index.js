@@ -68,3 +68,14 @@ describe('isNumber()', () => {
     assert.equal(isNumber('hello'), false);
   })
 });
+
+describe('isArray()', () => {
+  it('should return false if the argument is not an array', () => {
+    assert.equal(isArray(5), false);
+    assert.equal(isArray('hey'), false);
+  });
+
+  it('should return true if the argument is an array', () => {
+    assert.equal(isArray([1,2,3]), true);
+  });
+});
