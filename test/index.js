@@ -58,3 +58,13 @@ describe('reverseObject()', () => {
     assert.deepEqual(reverseObject({"a":1,"b":"c","d":4}), {"1":"a","4":"d",c:"b"});
   });
 });
+
+describe('isNumber()', () => {
+  it('should return true if the argument is a number', () => {
+    assert.equal(isNumber(5), true);
+  });
+
+  it('should return false if the argument is not a number', () => {
+    assert.equal(isNumber('hello'), false);
+  })
+});
