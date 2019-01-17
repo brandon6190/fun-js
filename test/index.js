@@ -79,3 +79,14 @@ describe('isArray()', () => {
     assert.equal(isArray([1,2,3]), true);
   });
 });
+
+describe('isObject()', () => {
+  it('should return true if the argument is an object', () => {
+    assert.equal(isObject([1,2,3]), true);
+  });
+
+  it('should return false if the argument is not an object', () => {
+    assert.equal(isObject(5), false);
+    assert.equal(isObject('hey'), false);;
+  });
+});
