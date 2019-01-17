@@ -88,13 +88,6 @@ function indexOf(array, value) {
   return -1;
 }
 
-/**
- * Creates a slice of array with n elements dropped from the beginning. n defaults to 1
- * drop([1, 2, 3]); → [2, 3]
- * drop([1, 2, 3], 2); → [3]
- * drop([1, 2, 3], 5); → []
- * drop([1, 2, 3], 0); → [1, 2, 3]
- */
 function drop(array, n) {
   const myArray = [...array];
   if (n === 0) {
