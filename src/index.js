@@ -29,11 +29,6 @@ function reverseObject(object) {
   return myObject;
 }
 
-/**
- * Returns boolean of whether argument is classified as a Number object
- * isNumber(5); → true
- * isNumber('hi'); → false
- */
 function isNumber(value) {
   if (typeof value === 'number') {
     return true;
@@ -41,11 +36,6 @@ function isNumber(value) {
   return false;
 }
 
-/**
- * Returns boolean of whether argument is classified as an Array object
- * isArray(5); → false
- * isArray([1,2,3]); → true
- */
 function isArray(value) {
   if (Array.isArray(value)) {
     return true;
@@ -53,11 +43,6 @@ function isArray(value) {
   return false;
 }
 
-/**
- * Returns boolean of whether argument is classified as an Object
- * isObject(5); → false
- * isObject([1,2,3]); → true
- */
 function isObject(value) {
   if (typeof value === 'object') {
     return true;
@@ -65,11 +50,6 @@ function isObject(value) {
   return false;
 }
 
-/**
- * return boolean of whether argument is classified as null
- * isNull(null); -> true
- * isNull(5); -> false
- */
 function isNull(value) {
   if (value === null) {
     return true;
@@ -77,14 +57,6 @@ function isNull(value) {
   return false;
 }
 
-/**
- * Creates a clone of an object.
- * var users = [{ 'user': 'barney' },{ 'user': 'fred' }];
- * var shallowClone = clone(users);
- * shallowClone === users -> false
- * shallowClone[0] === users[0] → true
- * DO NOT USE THE BUILT-IN Object.assign FUNCTION
- */
 function clone(value) {
   if (typeof value === 'object' && !Array.isArray(value)) {
     const shallowClone = JSON.parse(JSON.stringify(value));
@@ -96,13 +68,6 @@ function clone(value) {
   return 'Argument must be an array or object';
 }
 
-/**
- * Return the size of collection.
- * If the argument passed is an array, then return the length of the array.
- * If the argument passed is an object, then return the number of key/value properties.
- * size([1,2,3]); → 3
- * size({a: 1, b: 2}); → 2
- */
 function size(collection) {
   if (Array.isArray(collection)) {
     return collection.length;
@@ -114,13 +79,6 @@ function size(collection) {
   return count;
 }
 
-/**
- * Gets the index at which the first occurrence of value is found in array
- * Returns -1 if element is not in array
- * DO NOT USE THE BUILT-IN INDEXOF function
- * indexOf([11,22,33], 11); → 0
- * indexOf([11,22,33], 5); → -1
- */
 function indexOf(array, value) {
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] === value) {
