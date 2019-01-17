@@ -130,3 +130,21 @@ describe('indexOf()', () => {
     assert.equal(indexOf([11, 22, 33], 5), -1);
   });
 });
+
+describe('drop()', () => {
+  it('should remove the amount of elements equal to the second argument', () => {
+    assert.deepEqual(drop([1,2,3], 2), [3]);
+  });
+
+  it('should remove the first element in an array if the second argument is not provided', () => {
+    assert.deepEqual(drop([1,2,3]), [2,3]);
+  });
+
+  it('should return an empty array if the second argument is larger than the arrays length', () => {
+    assert.deepEqual(drop([1,2,3], 5), []);
+  });
+
+  it('should return the whole array if the second argument equals to 0', () => {
+    assert.deepEqual(drop([1,2,3], 0), [1,2,3]);
+  });
+});
