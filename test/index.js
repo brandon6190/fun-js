@@ -100,3 +100,13 @@ describe('isNull()', () => {
     assert.equal(isNull(5), false);
   });
 });
+
+describe('clone()', () => {
+  it('should create a shallow clone of an object or array', () => {
+    let users = [{ 'user': 'barney' },{ 'user': 'fred' }];
+    let shallowClone = clone(users);
+    
+    assert.equal(shallowClone[0] === users[0], true);
+    assert.equal(shallowClone === users, false);
+  });
+});
