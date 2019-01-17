@@ -110,3 +110,13 @@ describe('clone()', () => {
     assert.equal(shallowClone === users, false);
   });
 });
+
+describe('size()', () => {
+  it('should return the length of an array', () => {
+    assert.equal(size([1,2,3]), 3);
+  });
+
+  it('should return the number of key/value pairs in an object', () => {
+    assert.equal(size({a: 1, b: 2}), 2);
+  });
+});
