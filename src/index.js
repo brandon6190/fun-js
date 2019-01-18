@@ -130,10 +130,6 @@ function take(array, n) {
   return myArray;
 }
 
-/**
- * Returns an array containing the elements from array1 that are not in array2
- * difference([0,1,2,3,4,5],[3,5]); -> [0,1,2,4]
- */
 function difference(array1, array2) {
   const myArray1 = [...array1];
   const myArray2 = [...array2];
@@ -151,15 +147,6 @@ function difference(array1, array2) {
   return myArray1;
 }
 
-/**
- * Iterates over elements of an array invoking callback for each element.
- * The callback should be passed the element, the current index, and the entire array.
- * var callback = function(element, index, array) {
- *   console.log(element + "," + index + "," + array);
- * }
- * forEach(['a','b','c'], callback); → prints a,0,[a,b,c] b,1,[a,b,c] c,2,[a,b,c]
- * For each element in the array, the callback we passed is called. The callback can be customized, but in the above example, the callback prints out the element, index, and entire array.
- */
 function forEach(array, callback) {
   for (let i = 0; i < array.length; i += 1) {
     callback(array[i], i, array);
