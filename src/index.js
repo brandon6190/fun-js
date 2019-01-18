@@ -100,13 +100,6 @@ function drop(array, n) {
   return myArray;
 }
 
-/**
- * Creates a slice of array with n elements dropped from the end. n defaults to 1
- * dropRight([1, 2, 3]); → [1, 2]
- * dropRight([1, 2, 3], 2); → [1]
- * dropRight([1, 2, 3], 5); → []
- * dropRight([1, 2, 3], 0); → [1, 2, 3]
- */
 function dropRight(array, n) {
   const myArray = [...array];
   if (n === 0) {
@@ -120,13 +113,6 @@ function dropRight(array, n) {
   return myArray.reverse();
 }
 
-/**
- * Creates a slice of array containing n elements taken from the beginning. n defaults to 1
- * take([1, 2, 3]); → [1]
- * take([1, 2, 3], 2); → [1, 2]
- * take([1, 2, 3], 5); → [1, 2, 3]
- * take([1, 2, 3], 0); → []
- */
 function take(array, n) {
   const myArray = [];
   if (typeof n === 'undefined') {
