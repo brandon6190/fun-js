@@ -166,3 +166,21 @@ describe('dropRight()', () => {
     assert.deepEqual(dropRight([1,2,3], 0),[1,2,3]);
   });
 });
+
+describe('take()', () => {
+  it('shouold take the first element in the array if no second argument is provided', () => {
+    assert.deepEqual(take([1,2,3]), [1]);
+  });
+
+  it('should take elements in array equal to the amount of the second argument', () => {
+    assert.deepEqual(take([1,2,3], 2), [1,2]);
+  });
+
+  it('should take all the elements if the second argument is larger than the arrays length', () => {
+    assert.deepEqual(take([1,2,3], 5), [1,2,3]);
+  });
+
+  it('should return an emtpy array if the second argument equals to 0', () => {
+    assert.deepEqual(take([1,2,3], 0), []);
+  });
+});
