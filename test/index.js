@@ -184,3 +184,23 @@ describe('take()', () => {
     assert.deepEqual(take([1,2,3], 0), []);
   });
 });
+
+describe('difference()', () => {
+  it('should return an array containing elements from array1 that are not in array2', () => {
+    assert.deepEqual(difference([0,1,2,3,4,5],[3,5]), [0,1,2,4]);
+  });
+});
+
+describe('forEach()', () => {
+  const array = [1,2,3];
+  const testArray = [];
+  const callback = function(element) {
+    return testArray.push(element + 2);
+  };
+
+  forEach(array, callback);
+
+  it('should invoke callback on each element in the array', () => {
+    assert.deepEqual(testArray, [3,4,5]);
+  });
+});
