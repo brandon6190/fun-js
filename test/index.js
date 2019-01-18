@@ -198,7 +198,7 @@ describe('forEach()', () => {
     return testArray.push(element + 2);
   };
 
-  forEach(array, callback);
+  forEach(array, callback); // function to test
 
   it('should invoke callback on each element in the array', () => {
     assert.deepEqual(testArray, [3,4,5]);
