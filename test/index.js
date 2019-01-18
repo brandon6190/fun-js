@@ -148,3 +148,21 @@ describe('drop()', () => {
     assert.deepEqual(drop([1,2,3], 0), [1,2,3]);
   });
 });
+
+describe('dropRight()', () => {
+  it('should remove elements starting from the right, that equals the amount of the second argument', () => {
+    assert.deepEqual(dropRight([1,2,3], 2), [1]);
+  });
+
+  it('should remove the last element if the second argument is not provided', () => {
+    assert.deepEqual(dropRight([1,2,3]), [1,2]);
+  });
+
+  it('should return an empty array if the second argument is larger than the length of the array', () => {
+    assert.deepEqual(dropRight([1,2,3], 5), []);
+  });
+
+  it('should return the whole array if the second argument equals to 0', () => {
+    assert.deepEqual(dropRight([1,2,3], 0),[1,2,3]);
+  });
+});
