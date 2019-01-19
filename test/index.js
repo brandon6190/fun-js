@@ -228,3 +228,27 @@ describe('map()', () => {
     assert.deepEqual(testArray, [2,4,6]);
   });
 });
+
+describe('filter()', () => {
+  it('should invoke the callback on each element in an array and return a new array with elements that return truthy from the callback', () => {
+    const array = [1,2,3,4];
+    const callback = function(element) {
+      return element % 2 === 0;
+    };
+
+    const testArray = filter(array, callback);
+
+    assert.deepEqual(testArray, [2,4]);
+  });
+
+  it('should invoke the callback on each value in an object and return a new object with values that return truthy from the callback', () => {
+    const object = {a:1, b:2, c:3, d:4};
+    const callback = function(element) {
+      return element % 2 !== 0;
+    };
+
+    const testObject = filter(object, callback);
+
+    assert.deepEqual(testObject, {a:1, c:3});
+  });
+});
