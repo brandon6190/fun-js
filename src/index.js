@@ -168,15 +168,6 @@ function map(array, callback) {
   return mapped;
 }
 
-/**
- * Iterates over elements of collection returning an array of all the elements callback returns truthy for.
- * filter([1,2,3,4], function(element, index, array) {
- *  return element % 2 === 0;
- * }); → [2,4]
- * filter({a: 1, b: 2,c: 3,d: 4}, function(value, key, collection) {
- *  return element % 2 !== 0;
- * }); → {a: 1, c: 3}
- */
 function filter(collection, callback) {
   if (Array.isArray(collection)) {
     const passed = [];
