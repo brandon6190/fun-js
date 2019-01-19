@@ -218,3 +218,13 @@ describe('forEachRight()', () => {
     assert.deepEqual(testArray, [5,4,3]);
   });
 });
+
+describe('map()', () => {
+  const callback = function(element) {
+    return element * 2;
+  };
+  const testArray = map([1,2,3], callback);
+  it('should invoke the callback on each element in the array and return a new array', () => {
+    assert.deepEqual(testArray, [2,4,6]);
+  });
+});
