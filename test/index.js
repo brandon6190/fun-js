@@ -204,3 +204,17 @@ describe('forEach()', () => {
     assert.deepEqual(testArray, [3,4,5]);
   });
 });
+
+describe('forEachRight()', () => {
+  const array = [1,2,3];
+  const testArray = [];
+  const callback = function(element) {
+    return testArray.push(element + 2);
+  };
+
+  forEachRight(array, callback); // function to test
+
+  it('should invoke callback on each element in the array starting from the right', () => {
+    assert.deepEqual(testArray, [5,4,3]);
+  });
+});
