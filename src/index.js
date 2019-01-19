@@ -153,28 +153,11 @@ function forEach(array, callback) {
   }
 }
 
-// Iterates over elements of array in reverse invoking callback for each element.
-// The callback should be passed the element, the current index, and the entire array.
-//  var helper = function(element, index, array) {
-//    console.log(element + "," + index + "," + array);
-//  }
-
 function forEachRight(array, callback) {
   for (let i = array.length - 1; i >= 0; i -= 1) {
     callback(array[i], i, array);
   }
 }
-
-// forEachRight(['a','b','c'], helper); // → prints c,2,[a,b,c] b,1,[a,b,c] a,0,[a,b,c]
-
-/**
- * Creates an array of values by running each element in array through callback
- * The callback should be passed the element, the current index, and the entire array.
- * map([1,2,3], function(element, index, array) {
- *  return element * 3;
- * }); -> [3,6,9]
- * BONUS: use the forEach method you use to create map
- */
 
 function map(array, callback) {
   const mapped = [];
