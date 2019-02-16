@@ -219,7 +219,13 @@ function reject(collection, callback) {
 }
 
 function pluck(array, key) {
-
+  let myArray = [];
+  for (let i = 0; i < array.length; i += 1) {
+    if (typeof array[i] === 'object') {
+      myArray.push(array[i][key]);
+    }
+  }
+  return myArray;
 }
 
 module.exports = {
