@@ -192,11 +192,11 @@ function filter(collection, callback) {
 }
 
 function reject(collection, callback) {
-  let myObj = {};
+  const myObj = {};
 
   if (Array.isArray(collection)) {
     for (let i = 0; i < collection.length; i += 1) {
-      let truthyOrFalsy = callback(collection[i]);
+      const truthyOrFalsy = callback(collection[i]);
 
       if (truthyOrFalsy) {
         collection.splice(i, 1);
@@ -206,8 +206,8 @@ function reject(collection, callback) {
   }
 
   if (typeof collection === 'object' && !Array.isArray(collection)) {
-    for (let key in collection) {
-      let truthyOrFalsy = callback(collection[key]);
+    for (const key in collection) {
+      const truthyOrFalsy = callback(collection[key]);
 
       if (!truthyOrFalsy) {
         myObj[key] = collection[key];
@@ -219,7 +219,7 @@ function reject(collection, callback) {
 }
 
 function pluck(array, key) {
-  let myArray = [];
+  const myArray = [];
   for (let i = 0; i < array.length; i += 1) {
     if (typeof array[i] === 'object') {
       myArray.push(array[i][key]);
