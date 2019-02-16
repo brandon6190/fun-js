@@ -19,6 +19,8 @@ const {
   forEachRight,
   map,
   filter,
+  reject,
+  pluck
 } = require('../src');
 
 describe('isNegativeOrOdd()', () => {
@@ -252,3 +254,29 @@ describe('filter()', () => {
     assert.deepEqual(testObject, {a:1, c:3});
   });
 });
+
+describe('reject()', () => {
+  it('should remove all elements from array that callback returns truthy and return an array with the remaining elements', () => {
+    const testCB = (element, index, collection) => {
+      return element % 2 === 0;
+    };
+    let testArray = [1,2,3,4];
+    
+    const result = reject(testArray, testCB);
+
+    assert.deepEqual(result, [1,3]);
+  });
+
+  it('should also work on objects', () => {
+    const testCB = (value, key, collection) => {
+      return value % 2 !== 0;
+    };
+    let testObj = {a:1, b:2, c:3, d:4};
+
+    const result = reject(testObj, testCB);
+
+    assert.deepEqual(result, {b:2, d:4});
+  });
+});
+
+
