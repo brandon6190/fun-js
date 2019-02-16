@@ -279,4 +279,13 @@ describe('reject()', () => {
   });
 });
 
+describe('pluck', () => {
+  it('should get the value of the key from all elements in the array', () => {
+    let testArray = [
+      {user: 'Bob', age: 20},
+      {user: 'Sam', age: 25}
+    ];
 
+    assert.deepEqual(pluck(testArray, 'user'), ['Bob', 'Sam']);
+  });
+});
