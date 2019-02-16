@@ -190,6 +190,38 @@ function filter(collection, callback) {
   }
   return 'First argument must be an object or array';
 }
+
+function reject(collection, callback) {
+  let myObj = {};
+
+  if (Array.isArray(collection)) {
+    for (let i = 0; i < collection.length; i += 1) {
+      let truthyOrFalsy = callback(collection[i]);
+
+      if (truthyOrFalsy) {
+        collection.splice(i, 1);
+      }
+    }
+    return collection;
+  }
+
+  if (typeof collection === 'object' && !Array.isArray(collection)) {
+    for (let key in collection) {
+      let truthyOrFalsy = callback(collection[key]);
+
+      if (!truthyOrFalsy) {
+        myObj[key] = collection[key];
+      }
+    }
+
+    return myObj;
+  }
+}
+
+function pluck(array, key) {
+
+}
+
 module.exports = {
   isNegativeOrOdd,
   repeat,
@@ -210,4 +242,6 @@ module.exports = {
   forEachRight,
   map,
   filter,
+  reject,
+  pluck
 };
